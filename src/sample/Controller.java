@@ -22,7 +22,7 @@ public class Controller {
     public static final int NO_OF_NODES = 20;
     public static final int BASE_LINE = 500;
     public static final int TOP_BOUNDARY = 100;
-    public static int DX;
+    public static int DX = WINDOW_WIDTH / NO_OF_NODES;
 
     private HeapSort sort = new HeapSort();
 
@@ -59,6 +59,7 @@ public class Controller {
         Pane.getChildren().clear();
         Pane.getChildren().addAll(nodes);
         Pane.getChildren().addAll(ControlNodes.getTexts(nodes));
+        DX = WINDOW_WIDTH / nodes.size();
     }
 
     @FXML
